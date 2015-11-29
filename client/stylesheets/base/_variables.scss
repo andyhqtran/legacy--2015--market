@@ -1,0 +1,32 @@
+// Fonts
+$body-font: "Open Sans";
+
+// Font Weight
+$ultra: 800;
+$bold: 700;
+$semibold: 600;
+$regular: 400;
+$light: 300;
+$thin: 100;
+
+// Browser Settings
+$default-browser-font-size: 16;
+
+// Base Settings
+$base-background: $white;
+$base-color: $gray;
+$base-font-family: $body-font, sans-serif;
+$base-font-size: em(14);
+$base-font-weight: $regular;
+$base-line-height: em(20);
+
+// Grid Settings
+$container: null;
+$columns: 12;
+$gutters: 20px;
+
+// Header Settings
+$header-background: $white;
+
+// Media Queries
+$media-query: (tablet: 768px, phone: 480px);

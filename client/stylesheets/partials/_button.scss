@@ -1,0 +1,18 @@
+.btn {
+  outline: none;
+  display: inline-block;
+  background: $accent;
+  border: 0;
+  border-radius: 3px;
+  padding: ($gutters / 2) $gutters;
+  color: $white;
+  font-size: em(14);
+  font-weight: $semibold;
+  vertical-align: middle;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($accent, 10%);
+  }
+}

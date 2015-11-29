@@ -26,39 +26,43 @@
       }
     }
 
-    .btn {
-      margin: 0;
-
-      a {
+    .register,
+    .cart,
+    .login,
+    .logout {
+      .btn {
         display: block;
         background: rgba($black, 0.05);
         padding: ($gutters / 2) ($gutters / 2 + 6);
       }
 
       &:hover {
-        a {
+        .btn {
           background: $accent;
           color: $white;
         }
       }
+    }
+  }
 
-      &.register {
-        margin: 0 0 0 ($gutters / 2);
+  .register {
+    margin: 0 0 0 ($gutters / 2);
 
-        a {
-          border-radius: 4px 0 0 4px;
-        }
-      }
+    a {
+      border-radius: 4px 0 0 4px;
+    }
+  }
 
-      &.cart {
-        margin: 0 1px;
-      }
+  .cart {
+    margin: 0 2px;
+  }
 
-      &.login {
-        a {
-          border-radius: 0 4px 4px 0;
-        }
-      }
+  .login,
+  .logout {
+    margin: 0;
+
+    a {
+      border-radius: 0 4px 4px 0;
     }
   }
 }

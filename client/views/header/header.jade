@@ -28,12 +28,15 @@ template(name='headerNav')
                        align-items='center')
     each items
       if isCart
-        li(class='btn cart'): a(href=pathFor(name))
+        li(class='cart'): a(class='btn'
+                            href=pathFor(name))
           i(class='icon_cart')
       else if isRegister
-        li(class='btn register'): a(href=pathFor(name)) Create an Account
+        li(class='register'): a(class='btn'
+                            href=pathFor(name)) Create an Account
       else if isLogin
-        li(class='btn login'): a(href=pathFor(name))=name
+        li(class='login'): a(class='btn'
+                            href=pathFor(name))=name
       else
         li: a(class=isActive
               href=pathFor(name))=name

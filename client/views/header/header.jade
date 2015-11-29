@@ -19,4 +19,21 @@ template(name='header')
                 title='ElegantThemes')
 
           // Nav
-          +nav
+          +headerNav
+
+template(name='headerNav')
+  nav(class='header-nav'): ul(flex=''
+                       flex-direction='row'
+                       flex-wrap='wrap'
+                       align-items='center')
+    each items
+      if isCart
+        li(class='btn cart'): a(href=pathFor(name))
+          i(class='icon_cart')
+      else if isRegister
+        li(class='btn register'): a(href=pathFor(name)) Create an Account
+      else if isLogin
+        li(class='btn login'): a(href=pathFor(name))=name
+      else
+        li: a(class=isActive
+              href=pathFor(name))=name

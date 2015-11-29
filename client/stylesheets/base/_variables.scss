@@ -21,9 +21,17 @@ $base-font-weight: $regular;
 $base-line-height: em(20);
 
 // Grid Settings
-$container: null;
+$max-width: 1280px;
 $columns: 12;
 $gutters: 20px;
+
+// Flex Grid Settings
+$align-content: flex-start, flex-end, center, space-between, space-around, stretch;
+$align-items: flex-start, flex-end, center, baseline, stretch;
+$align-self: auto, flex-start, flex-end, center, baseline, stretch;
+$flex-direction: row, row-reserve, column, column-reverse;
+$flex-wrap: nowrap, wrap, wrap-reverse;
+$justify-content: flex-start, flex-end, center, space-between, space-around;
 
 // Header Settings
 $header-background: $white;

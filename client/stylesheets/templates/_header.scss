@@ -48,20 +48,24 @@
   .register {
     margin: 0 0 0 ($gutters / 2);
 
-    a {
+    .btn {
       border-radius: 4px 0 0 4px;
     }
   }
 
   .cart {
     margin: 0 2px;
+
+    .btn {
+      border-radius: 0;
+    }
   }
 
   .login,
   .logout {
     margin: 0;
 
-    a {
+    .btn {
       border-radius: 0 4px 4px 0;
     }
   }

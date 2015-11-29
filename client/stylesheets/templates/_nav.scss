@@ -1,0 +1,57 @@
+.nav {
+  font-size: 12px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 ($gutters / 2);
+  }
+
+  a {
+    color: $dark-gray;
+    font-weight: $semibold;
+    transition: 0.3s ease;
+
+    &.active {
+      color: $accent;
+    }
+  }
+
+  & &-button {
+    margin: 0;
+
+    a {
+      display: block;
+      background: rgba($black, 0.05);
+      padding: ($gutters / 2) ($gutters / 2 + 6);
+    }
+
+    &:hover {
+      a {
+        background: $accent;
+        color: $white;
+      }
+    }
+
+    &.register {
+      margin: 0 0 0 ($gutters / 2);
+
+      a {
+        border-radius: 4px 0 0 4px;
+      }
+    }
+
+    &.cart {
+      margin: 0 1px;
+    }
+
+    &.login {
+      a {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+  }
+}

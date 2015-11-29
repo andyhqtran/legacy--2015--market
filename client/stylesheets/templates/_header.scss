@@ -1,3 +1,5 @@
 .header {
   background: $header-background;
+  box-shadow: 0 0 2px rgba($black, 0.2);
+  padding: ($gutters / 2) 0;
 }

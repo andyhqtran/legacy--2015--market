@@ -1,6 +1,22 @@
 template(name='header')
   header(class='header')
-    div(class='logo')
-      img(src='img/logo.svg'
-          title='ElegantThemes')
-    +nav
+
+    // Container
+    div(class='container')
+
+      // Row
+      div(class='row')
+
+        // Col (12)
+        div(class='col col-12'
+            flex=''
+            align-items='center'
+            justify-content='space-between')
+
+          // Logo
+          div(class='logo')
+            img(src='img/logo.png'
+                title='ElegantThemes')
+
+          // Nav
+          +nav

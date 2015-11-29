@@ -9,5 +9,23 @@ Template.nav.helpers({
     } else {
       return '';
     }
+  },
+
+  isCart: function () {
+    if (this.name === 'Cart') {
+      return true;
+    }
+  },
+
+  isRegister: function () {
+    if (this.name === 'Sign Up') {
+      return true;
+    }
+  },
+
+  isLogin: function () {
+    if (this.name === 'Sign In') {
+      return true;
+    }
   }
 });

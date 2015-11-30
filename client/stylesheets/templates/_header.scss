@@ -16,12 +16,16 @@
     }
 
     a {
-      color: $dark-gray;
+      color: $gray;
       font-weight: $semibold;
       transition: 0.3s ease;
 
-      &.active {
+      &.brand {
         color: $accent;
+      }
+
+      &.active {
+        color: $dark-gray;
       }
     }
 

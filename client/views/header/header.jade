@@ -30,7 +30,7 @@ template(name='headerNav')
     each items
       unless isHome
         if isElegantThemes
-          li: a(class='active'
+          li: a(class='brand'
                 href=path)=name
         else if isCart
           li(class='cart'): a(class='btn'

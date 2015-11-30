@@ -47,3 +47,26 @@ Template.headerNav.helpers({
     }
   }
 });
+
+categoryItems = [{
+  'name': 'All Items',
+  'path': '/'
+}, {
+  'name': 'Child Themes',
+  'path': '/'
+}, {
+  'name': 'Plugins',
+  'path': '/'
+}, {
+  'name': 'Books',
+  'path': '/'
+}, {
+  'name': 'Courses',
+  'path': '/'
+}];
+
+Template.headerCategories.helpers({
+  categories: function () {
+    return categoryItems;
+  },
+});

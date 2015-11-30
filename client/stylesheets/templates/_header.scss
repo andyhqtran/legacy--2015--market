@@ -1,7 +1,7 @@
 .header {
   background: $header-background;
   box-shadow: 0 0 2px rgba($black, 0.2);
-  padding: ($gutters / 2) 0;
+  padding: ($gutters / 2) 0 0;
 
   // Header Nav
   &-nav {
@@ -13,12 +13,16 @@
     li {
       margin: 0 ($gutters / 2);
       font-size: em(12);
+      font-weight: $semibold;
     }
 
     a {
       color: $gray;
-      font-weight: $semibold;
       transition: 0.3s ease;
+
+      &:hover {
+        color: $dark-gray;
+      }
 
       &.brand {
         color: $accent;
@@ -87,5 +91,35 @@
   // Dev
   .logout {
     display: none;
+  }
+
+  &-categories {
+    background: #F7F7F7;
+    margin: ($gutters / 2) 0 0;
+    padding: ($gutters / 2) 0;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 0 $gutters 0 0;
+      font-size: em(12);
+      font-weight: $semibold;
+    }
+
+    a {
+      color: $gray;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $dark-gray;
+      }
+
+      &.active {
+        color: $dark-gray;
+      }
+    }
   }
 }

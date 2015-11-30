@@ -1,26 +1,17 @@
 template(name='header')
   header(class='header')
-
-    // Container
     div(class='container')
-
-      // Row
       div(class='row')
-
-        // Col (12)
         div(class='col col-12'
             flex=''
             align-items='center'
             justify-content='space-between')
-
-          // Logo
           a(class='logo'
             href='{{pathFor "Home"}}')
             img(src='img/logo.png'
                 title='ElegantThemes')
-
-          // Nav
           +headerNav
+    +headerCategories
 
 template(name='headerNav')
   nav(class='header-nav'): ul(flex=''
@@ -49,3 +40,15 @@ template(name='headerNav')
         else
           li: a(class=isActive
                 href=pathFor(name))=name
+
+template(name='headerCategories')
+  div(class='header-categories')
+    div(class='container')
+      div(class='row')
+        div(class='col col-12')
+          ul(flex=''
+             flex-direction='row'
+             flex-wrap='wrap'
+             align-items='center')
+            each categories
+              li: a(href=pathFor(name))=name

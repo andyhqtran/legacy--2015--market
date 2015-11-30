@@ -6,7 +6,7 @@
   border-radius: 3px;
   padding: ($gutters / 2) $gutters;
   color: $white;
-  font-size: em(14);
+  font-size: inherit;
   font-weight: $semibold;
   vertical-align: middle;
   transition: 0.3s ease;

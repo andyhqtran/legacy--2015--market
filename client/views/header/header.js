@@ -11,6 +11,18 @@ Template.headerNav.helpers({
     }
   },
 
+  isHome: function () {
+    if (this.name === 'Home') {
+      return true;
+    }
+  },
+
+  isElegantThemes: function () {
+    if (this.name === 'ElegantThemes') {
+      return true;
+    }
+  },
+
   isCart: function () {
     if (this.name === 'Cart') {
       return true;
@@ -25,6 +37,12 @@ Template.headerNav.helpers({
 
   isLogin: function () {
     if (this.name === 'Sign In') {
+      return true;
+    }
+  },
+
+  isLogout: function () {
+    if (this.name === 'Sign Out') {
       return true;
     }
   }

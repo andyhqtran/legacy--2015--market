@@ -5,8 +5,6 @@
 
   // Header Nav
   &-nav {
-    font-size: 12px;
-
     ul {
       list-style: none;
       padding: 0;
@@ -14,6 +12,7 @@
 
     li {
       margin: 0 ($gutters / 2);
+      font-size: em(12);
     }
 
     a {
@@ -56,6 +55,17 @@
   .cart {
     margin: 0 2px;
 
+    .icon_cart {
+      margin: 0 4px 0 0;
+    }
+
+    &:hover {
+      .badge {
+        background: $white;
+        color: $accent;
+      }
+    }
+
     .btn {
       border-radius: 0;
     }
@@ -68,5 +78,10 @@
     .btn {
       border-radius: 0 4px 4px 0;
     }
+  }
+
+  // Dev
+  .logout {
+    display: none;
   }
 }

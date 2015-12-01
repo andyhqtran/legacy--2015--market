@@ -67,6 +67,20 @@ ol {
   }
 }
 
+.unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+.inline {
+  @extend .unstyled;
+
+  li {
+    display: inline-block;
+    margin: 0 ($gutters / 2) 0 0;
+  }
+}
+
 img {
   display: block;
   width: 100%;

@@ -1,0 +1,14 @@
+.input {
+  outline: none;
+  background: $white;
+  border: 0;
+  border-radius: 3px;
+  padding: ($gutters / 2 + 6) $gutters;
+  line-height: normal;
+  color: $gray;
+  transition: 0.3s ease;
+
+  &:focus {
+    color: $dark-gray;
+  }
+}

@@ -2,7 +2,7 @@
   position: relative;
   background: $accent url("img/hero-bg.jpg") center no-repeat;
   background-size: cover;
-  padding: 250px 0;
+  padding: 160px 0;
 
   &:before {
     content: '';
@@ -13,5 +13,37 @@
     background: rgba($accent, 0.9);
     width: 100%;
     height: 100%;
+  }
+
+  &-text {
+    z-index: 1;
+    position: relative;
+    width: 60%;
+    margin: 0 0 ($gutters * 2);
+    color: rgba($white, 0.8);
+    text-align: center;
+
+    h1 {
+      margin: 0 0 $gutters;
+      color: $white;
+    }
+  }
+
+  &-search {
+    z-index: 1;
+    position: relative;
+    width: 60%;
+
+    .input {
+      width: 100%;
+      border-radius: 3px 0 0 3px;
+      border-right: 1px solid rgba($black, 0.1);
+    }
+
+    .btn {
+      background: darken($white, 5%);
+      color: $dark-gray;
+      border-radius: 0 3px 3px 0;
+    }
   }
 }

@@ -143,3 +143,12 @@ Template.headerCategories.helpers({
     }
   },
 });
+
+Template.headerCategories.events({
+  'mouseenter .has-sub-menu': function (e) {
+    $(e.target).children('.sub-menu').stop().fadeIn(300, 'swing');
+  },
+  'mouseleave .has-sub-menu': function (e) {
+    $(e.target).children('.sub-menu').stop().fadeOut(300, 'swing');
+  }
+});

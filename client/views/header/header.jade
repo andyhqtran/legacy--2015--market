@@ -55,7 +55,7 @@ template(name='headerCategories')
                 unless hasSubMenu
                   li: a(href=pathFor(name))=name
                 else
-                  li
+                  li(class='has-sub-menu')
                     a(href=pathFor(name))=name
                     ul(class='sub-menu')
                       each subCategories

@@ -49,24 +49,97 @@ Template.headerNav.helpers({
 });
 
 categoryItems = [{
+  'type': 'category',
+  'parent': 'none',
   'name': 'All Items',
-  'path': '/'
+  'path': '/',
+  'subMenu': false,
 }, {
+  'type': 'category',
+  'parent': 'none',
   'name': 'Child Themes',
-  'path': '/'
+  'path': '/',
+  'subMenu': true,
 }, {
+  'type': 'sub-category',
+  'parent': 'Child Themes',
+  'name': 'Blog',
+  'path': '/',
+  'subMenu': false,
+}, {
+  'type': 'sub-category',
+  'parent': 'Child Themes',
+  'name': 'Corporate',
+  'path': '/',
+  'subMenu': false,
+}, {
+  'type': 'sub-category',
+  'parent': 'Child Themes',
+  'name': 'Creative',
+  'path': '/',
+  'subMenu': false,
+}, {
+  'type': 'sub-category',
+  'parent': 'Child Themes',
+  'name': 'eCommerce',
+  'path': '/',
+  'subMenu': false,
+}, {
+  'type': 'sub-category',
+  'parent': 'Child Themes',
+  'name': 'Nonprofit',
+  'path': '/',
+  'subMenu': false,
+}, {
+  'type': 'sub-category',
+  'parent': 'Child Themes',
+  'name': 'Technology',
+  'path': '/',
+  'subMenu': false,
+}, {
+  'type': 'sub-category',
+  'parent': 'Child Themes',
+  'name': 'Wedding',
+  'path': '/',
+  'subMenu': false,
+}, {
+  'type': 'category',
+  'parent': 'none',
   'name': 'Plugins',
-  'path': '/'
+  'path': '/',
+  'subMenu': false,
 }, {
+  'type': 'category',
+  'parent': 'none',
   'name': 'Books',
-  'path': '/'
+  'path': '/',
+  'subMenu': false,
 }, {
+  'type': 'category',
+  'parent': 'none',
   'name': 'Courses',
-  'path': '/'
+  'path': '/',
+  'subMenu': false,
 }];
 
 Template.headerCategories.helpers({
   categories: function () {
     return categoryItems;
+  },
+
+  subCategories: function () {
+    return categoryItems;
+  },
+
+  isCategory: function () {
+    if (this.type === 'category') {
+      return true;
+    }
+  },
+
+  hasSubMenu: function () {
+    if (this.subMenu === true) {
+      return true;
+    }
   },
 });

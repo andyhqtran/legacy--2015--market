@@ -51,4 +51,13 @@ template(name='headerCategories')
              flex-wrap='wrap'
              align-items='center')
             each categories
-              li: a(href=pathFor(name))=name
+              if isCategory
+                unless hasSubMenu
+                  li: a(href=pathFor(name))=name
+                else
+                  li
+                    a(href=pathFor(name))=name
+                    ul(class='sub-menu')
+                      each subCategories
+                        unless isCategory
+                          li: a(href='#')=name

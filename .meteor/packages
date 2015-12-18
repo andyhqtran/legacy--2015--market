@@ -25,3 +25,5 @@ iron:router
 mquandalle:jade
 fourseven:scss
 accounts-base
+twbs:bootstrap
+multiply:iron-router-progress

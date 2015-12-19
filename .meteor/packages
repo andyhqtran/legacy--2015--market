@@ -19,11 +19,22 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 
+# Routing Packages
 http
 iron:router
+multiply:iron-router-progress
 
+# Development Packages
 mquandalle:jade
 fourseven:scss
-accounts-base
+
+# Layout Packages
 twbs:bootstrap
-multiply:iron-router-progress
+
+# Account Packages
+ian:accounts-ui-bootstrap-3
+accounts-password
+accounts-facebook
+accounts-twitter
+accounts-google
+accounts-github

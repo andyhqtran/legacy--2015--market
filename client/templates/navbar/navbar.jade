@@ -1,0 +1,20 @@
+template(name='navbar')
+  nav.navbar.navbar-inverse.navbar-fixed-top
+    .container-fluid
+
+      // Navbar Header
+      .navbar-header
+        button.navbar-toggle.collapsed(type='button'
+                                       data-toggle='collapse'
+                                       data-target='#navbar'
+                                       aria-expanded='false')
+        a.navbar-brand(href='/') Elegant Market
+
+      // Nav
+      #navbar.navbar-collapse.collapse
+        ul.nav.navbar-nav
+          each items
+            li(class=isActive): a(href=path)=name
+
+        ul.nav.navbar-nav.navbar-right
+          +loginButtons

@@ -44,18 +44,21 @@ template(name='productsPage')
                 label Full name
                 input.form-control(type='name'
                                    name='name'
-                                   placeholder='Name')
+                                   placeholder='Name'
+                                   required='')
             .col-md-6
               .form-group
                 label Email Address
                 input.form-control(type='email'
                                    name='email'
-                                   placeholder='Email')
+                                   placeholder='Email'
+                                   required='')
             .col-md-12
               .form-group
                 label
                 textarea.form-control(type='text'
                                       name='comment'
-                                      placeholder='Comment..')
+                                      placeholder='Comment..'
+                                      required='')
               button.btn.btn-primary(type='submit') Submit
 

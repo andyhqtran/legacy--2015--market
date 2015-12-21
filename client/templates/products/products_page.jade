@@ -1,0 +1,21 @@
+template(name='productsPage')
+  .container
+    .row
+      .col-md-12
+        .page-header
+          h1
+            =title
+            small=price
+    .row
+      .col-md-6.col-sm-12
+        a.thumbnail(href='#')
+          img(src=thumbnail)
+      .col-md-6.col-sm-12
+        .panel.panel-default
+          .panel-heading Product Info
+          .panel-body
+            h4
+              =title
+              span=price
+            p=description
+            a.btn.btn-primary(href='#') Purchase

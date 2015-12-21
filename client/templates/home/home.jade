@@ -9,3 +9,15 @@ template(name='home')
                            placehold='Search product...')
         .input-group-btn
           button.btn.btn-primary.btn-lg(type='button') Join Us
+  .container
+    .row
+      each products
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src=thumbnail)
+            .caption
+              h3
+                =shortTitle
+                .label.label-primary(style='font-size: 50%; vertical-align: middle;')=price
+              p=excerpt
+              a.btn.btn-primary(href="{{pathFor 'productsPage'}}") View Product

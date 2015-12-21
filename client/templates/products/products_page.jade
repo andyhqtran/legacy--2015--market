@@ -29,29 +29,33 @@ template(name='productsPage')
                 .media-left
                   img(src='http://placehold.it/48/ED6451/fff')
                 .media-body
-                  h4.media-heading=title
-                  | ...
+                  h4.media-heading
+                    a(href='mailto:#{email}')=name
+                  =comment
 
         br
         br
         .row
           .col-md-12
             h4 Leave a Comment
-          form
+          form.comments
             .col-md-6
               .form-group
                 label Full name
                 input.form-control(type='name'
+                                   name='name'
                                    placeholder='Name')
             .col-md-6
               .form-group
                 label Email Address
                 input.form-control(type='email'
+                                   name='email'
                                    placeholder='Email')
             .col-md-12
               .form-group
                 label
                 textarea.form-control(type='text'
+                                      name='comment'
                                       placeholder='Comment..')
-              button.btn.btn-primary(type='button') Submit
+              button.btn.btn-primary(type='submit') Submit
 

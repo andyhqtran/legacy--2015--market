@@ -38,27 +38,30 @@ template(name='productsPage')
         .row
           .col-md-12
             h4 Leave a Comment
-          form.comments
-            .col-md-6
-              .form-group
-                label Full name
-                input.form-control(type='name'
-                                   name='name'
-                                   placeholder='Name'
-                                   required='')
-            .col-md-6
-              .form-group
-                label Email Address
-                input.form-control(type='email'
-                                   name='email'
-                                   placeholder='Email'
-                                   required='')
-            .col-md-12
-              .form-group
-                label
-                textarea.form-control(type='text'
-                                      name='comment'
-                                      placeholder='Comment..'
-                                      required='')
-              button.btn.btn-primary(type='submit') Submit
+            if currentUser
+              form.comments
+                .col-md-6
+                  .form-group
+                    label Full name
+                    input.form-control(type='name'
+                                       name='name'
+                                       placeholder='Name'
+                                       required='')
+                .col-md-6
+                  .form-group
+                    label Email Address
+                    input.form-control(type='email'
+                                       name='email'
+                                       placeholder='Email'
+                                       required='')
+                .col-md-12
+                  .form-group
+                    label
+                    textarea.form-control(type='text'
+                                          name='comment'
+                                          placeholder='Comment..'
+                                          required='')
+                  button.btn.btn-primary(type='submit') Submit
+            else
+              p You must be logged in to leave a comment.
 

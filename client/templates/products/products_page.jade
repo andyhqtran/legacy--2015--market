@@ -4,18 +4,54 @@ template(name='productsPage')
       .col-md-12
         .page-header
           h1
-            =title
-            small=price
+            =product.title
+            small=product.price
     .row
       .col-md-6.col-sm-12
         a.thumbnail(href='#')
-          img(src=thumbnail)
+          img(src=product.thumbnail)
       .col-md-6.col-sm-12
         .panel.panel-default
           .panel-heading Product Info
           .panel-body
             h4
-              =title
-              span=price
-            p=description
+              =product.title
+              span=product.price
+            p=product.description
             a.btn.btn-primary(href='#') Purchase
+
+        br
+        .row
+          .col-md-12
+            h4 Comments
+            each comments
+              .media
+                .media-left
+                  img(src='http://placehold.it/48/ED6451/fff')
+                .media-body
+                  h4.media-heading=title
+                  | ...
+
+        br
+        br
+        .row
+          .col-md-12
+            h4 Leave a Comment
+          form
+            .col-md-6
+              .form-group
+                label Full name
+                input.form-control(type='name'
+                                   placeholder='Name')
+            .col-md-6
+              .form-group
+                label Email Address
+                input.form-control(type='email'
+                                   placeholder='Email')
+            .col-md-12
+              .form-group
+                label
+                textarea.form-control(type='text'
+                                      placeholder='Comment..')
+              button.btn.btn-primary(type='button') Submit
+

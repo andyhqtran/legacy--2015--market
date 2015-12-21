@@ -24,6 +24,39 @@ Template.navbar.helpers({
   },
 });
 
+Template.navbar.events({
+  "submit #addProductModal": function (e) {
+
+    console.log(this);
+
+    // Prevent default browser form submit
+    e.preventDefault();
+
+    // Get value from form element
+    var title = e.target.title.value;
+    var price = e.target.price.value;
+    var image = e.target.image.value;
+    var description = e.target.description.value;
+
+    // Insert a task into the collection
+    Products.insert({
+      title: title,
+      thumbnail: image,
+      price: price,
+      description: description,
+      date: new Date() // current time
+    });
+
+    // Clear form
+    e.target.title.value = "";
+    e.target.price.value = "";
+    e.target.image.value = "";
+    e.target.description.value = "";
+
+    $('#addProductModal').modal('hide');
+  }
+});
+
 Accounts.ui.config({
     requestPermissions: {},
     extraSignupFields: [{

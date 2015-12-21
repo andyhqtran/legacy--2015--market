@@ -16,5 +16,59 @@ template(name='navbar')
           each items
             li(class=isActive): a(href=path)=name
 
+        button.btn.btn-default.navbar-btn(type='button'
+                                          data-toggle='modal'
+                                          data-target='#addProductModal') Add Product
+
         ul.nav.navbar-nav.navbar-right
           +loginButtons
+
+  +addProductModal
+
+
+template(name='addProductModal')
+  .modal.fade#addProductModal(tabindex='-1'
+                              role='dialog'
+                              aria-labelledby='addProductModal')
+    .modal-dialog
+      form.modal-content
+        .modal-header
+          button.close(type='button'
+                       data-dismiss='modal'
+                       aria-label='Close')
+            span(aria-hidden='true') &times;
+          h4 Add Product
+          .modal-body
+            .row
+              .col-md-6.col-sm-12
+                .form-group
+                  label Product Title
+                  input.form-control(type='text'
+                                     name='title'
+                                     placeholder='Product Title'
+                                     required='')
+              .col-md-6.col-sm-12
+                .form-group
+                  label Price
+                  input.form-control(type='text'
+                                     name='price'
+                                     placeholder='Price'
+                                     required='')
+              .col-md-12
+                .form-group
+                  label Image URL (Temp)
+                  input.form-control(type='text'
+                                     name='image'
+                                     placeholder='Enter URL'
+                                     required='')
+              .col-md-12
+                .form-group
+                  label Description
+                  textarea.form-control(type='text'
+                                        name='description'
+                                        placeholder='description'
+                                        required='')
+
+          .modal-footer
+            button.btn.btn-default(data-dismiss='modal') Cancel
+            button.btn.btn-primary(type='submit') Create Product
